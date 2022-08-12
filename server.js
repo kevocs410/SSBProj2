@@ -52,6 +52,16 @@ app.get('/' , (req, res) => {
   res.send('Hello World!');
 });
 
+////index route
+app.get("/anime", (req,res)=>{
+  res.send("Hello Start Page")
+})
+
+
+
+
+
+
 //___________________
 //Listener
 //___________________
