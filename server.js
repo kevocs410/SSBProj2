@@ -60,6 +60,16 @@ app.get('/' , (req, res) => {
   res.send('Hello World!');
 });
 
+
+////index route
+app.get("/anime", (req,res)=>{
+  res.render("index.ejs")
+  })
+
+
+
+
+
 /// create route 
 app. get("/anime/new", (req,res)=>{
   res.render("new.ejs")
@@ -88,10 +98,6 @@ app.get("/anime/:id", (req, res)=>{
 
 
 
-////index route
-app.get("/anime", (req,res)=>{
-res.send("hello")
-})
 
 ///delete route
 app.delete("/anime/:id", (req, res)=>{
