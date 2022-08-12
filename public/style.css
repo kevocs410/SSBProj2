@@ -1,0 +1,9 @@
+@font-face {
+    font-family: Anime;
+    src: url(anime-ace.regular.ttf);
+}
+
+h1 {
+    font-family: Anime;
+    color: rgb(0, 0, 0);
+}
