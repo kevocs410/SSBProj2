@@ -5,9 +5,9 @@
 
 h1 {
     font-family: Anime;
-    color: rgb(253, 253, 253);
+    color: rgb(255, 255, 255);
     text-align: center;
-    z-index: 7;
+    /* z-index: 7; */
 }
 
 .index{
