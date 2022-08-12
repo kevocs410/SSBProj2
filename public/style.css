@@ -5,10 +5,17 @@
 
 h1 {
     font-family: Anime;
-    color: rgb(0, 0, 0);
+    color: rgb(253, 253, 253);
     text-align: center;
     z-index: 7;
 }
+
+.index{
+
+z-index: 10;
+
+}
+
 
 .gif{
     position: absolute;
