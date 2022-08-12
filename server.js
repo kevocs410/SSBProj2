@@ -52,14 +52,36 @@ app.get('/' , (req, res) => {
   res.send('Hello World!');
 });
 
-////index route
-app.get("/anime", (req,res)=>{
-  res.send("Hello Start Page")
+/// create route 
+app. get("/anime/new", (req,res)=>{
+  res.send("create page")
+  // res.render("new.ejs");
 })
 
 
 
 
+///show route
+app.get("/anime/:id", (req, res)=>{
+  res.send("show page")
+  // res.render("show.ejs")
+})
+
+
+
+////index route
+app.get("/anime", (req,res)=>{
+  res.send("Hello Start Page")
+})
+
+///delete route
+
+
+
+////edit route
+app.get("/anime/edit", (req,res)=>{
+  res.send("edit page")
+})
 
 
 //___________________
