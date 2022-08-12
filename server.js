@@ -95,7 +95,7 @@ app.get("/anime/:id", (req, res)=>{
 //index route
 app.get('/anime', (req, res) => {
   Anime.find({}, (error, allAnimes) => {
-      res.render('index.ejs', {
+      res.render("index.ejs", {
           animes: allAnimes
       });
   });
