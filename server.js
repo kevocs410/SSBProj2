@@ -61,75 +61,78 @@ app.get('/' , (req, res) => {
 });
 
 
-////index route
-app.get("/anime", (req,res)=>{
-  res.render("index.ejs")
+
+
+
+
+
+/// create route 
+app. get("/anime/new", (req,res)=>{
+  res.render("new.ejs")
+  // res.render("new.ejs");
+})
+
+app.post("/anime", (req, res) =>{
+
+  Anime.create(req.body, (error,createdAnime) =>{
+    res.redirect("/anime")
+  });
+});
+
+
+
+///show route
+app.get("/anime/:id", (req, res)=>{
+  Anime.findById(req.params.id, (err,foundAnime) =>{
+    res.render("show.ejs",{
+      animes:foundAnime
+    })
   })
+  res.send("show page")
+  // res.render("show.ejs")
+})
+
+//index route
+app.get('/anime', (req, res) => {
+  Anime.find({}, (error, allCharacters) => {
+      res.render('index.ejs', {
+          animes: allAnimes
+      });
+  });
+});
+
+
+///delete route
+app.delete("/anime/:id", (req, res)=>{
+  // res.send('deleting...');
+  Anime.findByIdAndRemove(req.params.id, (err, removedAnime) => {
+      res.redirect("/anime");
+  });
+});
+
+
+////edit route
+app.get("/anime/:id/edit", (req, res)=>{
+  Anime.findById(req.params.id, (err, foundAnime)=>{
+      res.render(
+      'edit.ejs',
+      {
+        animes: foundAnime
+      }
+    );
+  });
+});
 
 
 
+//////UPDATED ROUTES
 
 
-// /// create route 
-// app. get("/anime/new", (req,res)=>{
-//   res.render("new.ejs")
-//   // res.render("new.ejs");
-// })
-
-// app.post("/anime", (req, res) =>{
-
-//   Anime.create(req.body, (error,createdAnime) =>{
-//     res.redirect("/anime")
-//   });
-// });
-
-
-
-// ///show route
-// app.get("/anime/:id", (req, res)=>{
-//   Anime.findById(req.params.id, (err,foundAnime) =>{
-//     res.render("show.ejs",{
-//       animes:foundAnime
-//     })
-//   })
-//   res.send("show page")
-//   // res.render("show.ejs")
-// })
-
-
-
-
-// ///delete route
-// app.delete("/anime/:id", (req, res)=>{
-//   // res.send('deleting...');
-//   Anime.findByIdAndRemove(req.params.id, (err, removedAnime) => {
-//       res.redirect("/anime");
-//   });
-// });
-
-
-// ////edit route
-// app.get("/anime/:id/edit", (req, res)=>{
-//   Anime.findById(req.params.id, (err, foundAnime)=>{
-//       res.render(
-//       'edit.ejs',
-//       {
-//         animes: foundAnime
-//       }
-//     );
-//   });
-// });
-
-
-
-// //////UPDATED ROUTES
-
-
-// app.put("/anime/:id", (req, res)=>{
-//   Anime.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err, updatedAnime) => {
-//       res.redirect("/anime");
-//   });
-// });
+app.put("/anime/:id", (req, res)=>{
+  Anime.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err, updatedAnime) => {
+      res.redirect("/anime");
+  });
+});
 
 
 
