@@ -84,8 +84,8 @@ app.get("/anime/:id", (req, res)=>{
 
 
 ////index route
-app.get("/anime", (req, res) => {
-res.render("index.ejs");
+app.get("/anime", (req,res)=>{
+res.render("index.ejs")
 })
 
 ///delete route
