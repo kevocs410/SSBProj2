@@ -84,7 +84,7 @@ app.get("/anime/:id", (req, res)=>{
 
 
 ////index route
-app.get('/smash', (req, res) => {
+app.get("/anime", (req, res) => {
   Anime.find({}, (error, allAnimes) => {
       res.render('index.ejs', {
           animes: allAnimes
@@ -93,16 +93,16 @@ app.get('/smash', (req, res) => {
 });
 
 ///delete route
-app.delete('/anime/:id', (req, res)=>{
+app.delete("/anime/:id", (req, res)=>{
   // res.send('deleting...');
   Anime.findByIdAndRemove(req.params.id, (err, removedAnime) => {
-      res.redirect('/anime');
+      res.redirect("/anime");
   });
 });
 
 
 ////edit route
-app.get('/anime/:id/edit', (req, res)=>{
+app.get("/anime/:id/edit", (req, res)=>{
   Anime.findById(req.params.id, (err, foundAnime)=>{
       res.render(
       'edit.ejs',
@@ -118,9 +118,9 @@ app.get('/anime/:id/edit', (req, res)=>{
 //////UPDATED ROUTES
 
 
-app.put('/anime/:id', (req, res)=>{
+app.put("/anime/:id", (req, res)=>{
   Anime.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err, updatedAnime) => {
-      res.redirect('/anime');
+      res.redirect("/anime");
   });
 });
 
