@@ -48,9 +48,14 @@ app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
 ///// model
 
 //___________________
+
+
 // Routes
 //___________________
 //localhost:3000
+
+
+
 app.get('/' , (req, res) => {
   res.send('Hello World!');
 });
@@ -85,7 +90,7 @@ app.get("/anime/:id", (req, res)=>{
 
 ////index route
 app.get("/anime", (req,res)=>{
-res.render("index.ejs")
+res.send("hello")
 })
 
 ///delete route
@@ -111,14 +116,14 @@ app.get("/anime/:id/edit", (req, res)=>{
 
 
 
-//////UPDATED ROUTES
+// //////UPDATED ROUTES
 
 
-app.put("/anime/:id", (req, res)=>{
-  Anime.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err, updatedAnime) => {
-      res.redirect("/anime");
-  });
-});
+// app.put("/anime/:id", (req, res)=>{
+//   Anime.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err, updatedAnime) => {
+//       res.redirect("/anime");
+//   });
+// });
 
 
 
