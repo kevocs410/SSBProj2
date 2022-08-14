@@ -11,8 +11,12 @@
     <body>
         <h1>Add Anime</h1>
     
-        <form action="/artist/<%=animes.id%>?_method=PUT" method="POST">
-        </form>      
+        <form>
+            <!--  NOTE: the form is pre-populated with values for the server-->
+            Name: <input type="text" name="name" value="<%=animes.name%>"/><br/>
+            <br/>
+            <input type="submit" name="" value="Submit Changes"/>
+        </form>
 
 
 
