@@ -93,7 +93,7 @@ app.get("/anime/:id", (req, res)=>{
 })
 
 //index route
-app.get('/anime', (req, res) => {
+app.get("/anime", (req, res) => {
   Anime.find({}, (error, allAnimes) => {
       res.render("index.ejs", {
           animes: allAnimes
@@ -115,7 +115,7 @@ app.delete("/anime/:id", (req, res)=>{
 app.get("/anime/:id/edit", (req, res)=>{
   Anime.findById(req.params.id, (err, foundAnime)=>{
       res.render(
-      'edit.ejs',
+      "edit.ejs",
       {
         animes: foundAnime
       }
