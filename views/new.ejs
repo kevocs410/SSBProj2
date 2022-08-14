@@ -6,14 +6,14 @@
         <title>Add New Anime</title>
     </head>
     <body>
-        <h1>Create Anime Show </h1> -->
+        <h1>Create Anime Show </h1> 
         <h3>Fill in the fields:</h3>
        <form action="/anime" method="POST">
-            Name: <input type="text" name="name" value="<%=animes.name%>"/><br/>
-            Image: <input type="text" name="img" value="<%=animes.img%>"/><br/>
-            year: <input type="text" name="number" value="<%=animes.year%>"/><br/>
-            genre: <input type="text" name="genre" value="<%=animes.description.b%>"/><br/>
-            description: <input type="text" name="description" value="<%=animes.moveset.upb%>"/><br/>
+            Name: <input type="text" name="name" placeholder="name"/><br/>
+            Image: <input type="text" name="img" placeholder="image>"/><br/>
+            year: <input type="number" name="number" placeholder="year"/><br/>
+            genre: <input type="text" name="genre" placeholder="genre"/><br/>
+            description: <input type="text" name="description" placeholder="description"/><br/>
             <input type="submit" value="Add Anime"/>
         </form>
     </body>
