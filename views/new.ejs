@@ -6,11 +6,45 @@
         <title>Add New Anime</title>
     </head>
     <body>
-        <h1>Create Anime Show </h1> 
+        <div class="container">
+            <nav class="navbar navbar-dark bg-dark fixed-top upfront">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="#">Create A New Anime Show</a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+                    <div class="offcanvas-header">
+                      <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">What would you like to do</h5>
+                      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                      <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                          <a class="nav-link active" aria-current="page" href="anime/edit">Edit An Anime Show</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="/anime/">Back To Homepage</a>
+                        </li>
+                      <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-success" type="submit">Search</button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </nav>
+            </div>
+
+
+
+
+
+            
         <h3>Fill in the fields:</h3>
        <form action="/anime" method="POST">
             Name: <input type="text" name="name" placeholder="name"/><br/>
-            Image: <input type="text" name="img" placeholder="img link"/><br/>
+            Image Link: <input type="text" name="img" placeholder="img link"/><br/>
             year: <input type="number" name="number" placeholder="year"/><br/>
             genre: <input type="text" name="genre" placeholder="genre"/><br/>
             description: <input type="text" name="description" placeholder="description"/><br/>
