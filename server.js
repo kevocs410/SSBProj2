@@ -88,7 +88,7 @@ app.get("/anime/:id", (req, res)=>{
       animes:foundAnime
     })
   })
-  res.send("show page")
+  // res.send("show page")
   // res.render("show.ejs")
 })
 

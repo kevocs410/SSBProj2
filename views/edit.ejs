@@ -11,7 +11,9 @@
     <body>
         <h1>Add Anime</h1>
     
-        <%=animes[i].name%>
+        <form action="/artist/<%=anime.id%>?_method=PUT" method="POST">
+            <input type="text" placeholder="Name" name="name" value="<%=anime.name%>" /><br>
+        </form>      
 
 
 
