@@ -6,17 +6,15 @@
         <title>Add New Anime</title>
     </head>
     <body>
-        <!-- <h1>Create a Smash Character</h1> -->
-        <!-- <h3>Fill in the fields:</h3> -->
-        <!-- <form action="/smash" method="POST">
-            <input type="text" name="name" placeholder="name" /><br/>
-            <input type="text" name="img" placeholder="image" /><br/>
-            <input type="text" name="origin" placeholder="origin" /><br/>
-            <input type="text" name="moveset.b" placeholder="(B Move)" />
-            <input type="text" name="moveset.upb" placeholder="(Up-B Move)" />
-            <input type="text" name="moveset.downb" placeholder="(Down-B Move)" />
-            <input type="text" name="moveset.sideb" placeholder="(Side-B Move)" /><br/>
-            <input type="submit" value="Create Character"/>
-        </form> -->
+        <h1>Create Anime Show </h1> -->
+        <h3>Fill in the fields:</h3>
+       <form action="/anime" method="POST">
+            Name: <input type="text" name="name" value="<%=animes.name%>"/><br/>
+            Image: <input type="text" name="img" value="<%=animes.img%>"/><br/>
+            year: <input type="text" name="number" value="<%=animes.year%>"/><br/>
+            genre: <input type="text" name="genre" value="<%=animes.description.b%>"/><br/>
+            description: <input type="text" name="description" value="<%=animes.moveset.upb%>"/><br/>
+            <input type="submit" value="Add Anime"/>
+        </form>
     </body>
 </html>

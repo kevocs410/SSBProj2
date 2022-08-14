@@ -6,9 +6,16 @@
         <title>Edit Entry</title>
     </head>
     <body>
-        <h1>Edit Charcter</h1>
-       
+        <h1>Edit Anime</h1>
+        <form action="/anime/<%=animes.id%>?_method=PUT" method="POST">
+            Name: <input type="text" name="name" value="<%=animes.name%>"/><br/>
+            Image: <input type="text" name="img" value="<%=animes.img%>"/><br/>
+            year: <input type="text" name="number" value="<%=animes.year%>"/><br/>
+            genre: <input type="text" name="genre" value="<%=animes.description.b%>"/><br/>
+            description: <input type="text" name="description" value="<%=animes.moveset.upb%>"/><br/>
+            <input type="submit" name="" value="Submit Changes"/>
+        </form>
         <br/>
-        <a href="/">Back to Main Page</a>
+        <a href="/anime">Back to Main Page</a>
     </body>
 </html>
