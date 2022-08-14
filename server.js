@@ -119,9 +119,9 @@ app.get("/anime/:id/edit", (req, res)=>{
       {
         animes: foundAnime
       }
-    );
-  });
-});
+    )
+  })
+})
 
 
 
