@@ -67,7 +67,7 @@ app.get('/' , (req, res) => {
 
 
 /// create route 
-app. get("/anime/new", (req,res)=>{
+app.get("/anime/new", (req,res)=>{
   res.render("new.ejs")
   // res.render("new.ejs");
 })
