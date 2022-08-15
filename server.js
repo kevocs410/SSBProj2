@@ -67,10 +67,7 @@ app.get('/' , (req, res) => {
 
 
 /// create route 
-app. get("/anime/new", (req,res)=>{
-  res.render("new.ejs")
-  // res.render("new.ejs");
-})
+
 
 app.post("/anime", (req, res) =>{
 
@@ -88,8 +85,6 @@ app.get("/anime/:id", (req, res)=>{
       animes:foundAnime
     })
   })
-  // res.send("show page")
-  // res.render("show.ejs")
 })
 
 //index route
@@ -124,7 +119,10 @@ app.get("/anime/:id/edit", (req, res)=>{
 })
 
 
-
+app. get("/anime/new", (req,res)=>{
+  res.render("new.ejs")
+  // res.render("new.ejs");
+})
 //////UPDATED ROUTES
 
 
