@@ -4,7 +4,7 @@ const Schema = mongoose.Schema
 const animeSchema = new Schema({
     name: String,
     img: {type: String, required: false},
-    year:Number,
+    year:String,
     genre: String,
     description:String
 });

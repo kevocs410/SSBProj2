@@ -61,47 +61,6 @@ app.get('/' , (req, res) => {
 });
 
 
-
-
-
-
-
-/// create route 
-app.get("/anime/new", (req,res)=>{
-  res.render("new.ejs")
-  // res.render("new.ejs");
-})
-
-app.post("/anime", (req, res) =>{
-
-  Anime.create(req.body, (error,createdAnime) =>{
-    res.redirect("/anime")
-  });
-});
-
-
-
-///show route
-app.get("/anime/:id", (req, res)=>{
-  Anime.findById(req.params.id, (err,foundAnime) =>{
-    res.render("show.ejs",{
-      animes:foundAnime
-    })
-  })
-  res.send("show page")
-  // res.render("show.ejs")
-})
-
-//index route
-app.get("/anime", (req, res) => {
-  Anime.find({}, (error, allAnimes) => {
-      res.render("index.ejs", {
-          animes: allAnimes
-      });
-  });
-});
-
-
 ///delete route
 app.delete("/anime/:id", (req, res)=>{
   // res.send('deleting...');
@@ -133,6 +92,48 @@ app.put("/anime/:id", (req, res)=>{
       res.redirect("/anime");
   });
 });
+
+
+//index route
+app.get("/anime", (req, res) => {
+  Anime.find({}, (error, allAnimes) => {
+      res.render("index.ejs", {
+          animes: allAnimes
+      });
+  });
+});
+
+
+/// create route 
+app.get("/anime/new", (req,res)=>{
+  res.render("new.ejs")
+  // res.render("new.ejs");
+})
+
+app.post("/anime", (req, res) =>{
+
+  Anime.create(req.body, (error,createdAnime) =>{
+    res.redirect("/anime")
+  });
+});
+
+
+
+///show route
+app.get("/anime/show/:id", (req, res)=>{
+  Anime.findById(req.params.id, (err,foundAnime) =>{
+    res.render("show.ejs",{
+      animes:foundAnime
+    })
+  })
+  // res.send("show page")
+  // res.render("show.ejs")
+})
+
+
+
+
+
 
 
 

@@ -26,9 +26,6 @@
                     <li class="nav-item">
                       <a class="nav-link active" aria-current="page" href="/anime/new">Add Anime Show</a>
                     </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="/anime/:id/edit">Edit Anime Show</a>
-                    </li>
                   <form class="d-flex" role="search">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-success" type="submit">Search</button>
@@ -43,15 +40,14 @@
     
 
 
-
 <div class=" middle container d-flex flex-row mb-3 justify-content-evenly align-items-center ">
     <div class="p-2">
 
         <div class="card" style="width: 18rem;">
             <img src="https://mcdn.wallpapersafari.com/medium/58/93/JYFUV7.jpg" class="card-img-top" alt="...">
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <h5 class="card-title">fffff</h5>
+              <p class="card-text"></p>
               <a href="#" class="btn btn-primary"></a>
             </div>
           </div>
@@ -71,7 +67,7 @@
         <img src="https://mcdn.wallpapersafari.com/medium/58/93/JYFUV7.jpg" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <p class="card-text">text</p>
           <a href="#" class="btn btn-primary"></a>
         </div>
       </div></div>
@@ -80,27 +76,21 @@
 
 
 
-
-
-
-
-    <img class="gif" src="https://image.myanimelist.net/ui/BQM6jEZ-UJLgGUuvrNkYUCG8p-X1WhZLiR4h-oxkqQf2SFNwUGIBWCnvf9JBTeiR9-veoG0PIcNmHnSffrA-Gg">
-
-    <div class="overlay"></div>
-
-
-
-
-<h2 class=" upfront">
-<% for(let i=0; i <animes.length; i++) {%>
-
-    <h3 class="upfront"> <%=animes[i].name%>
+<h2 class="upfront"> 
+<% for(let i = 0; i < animes.length; i++){%>
+  
+    <h3 class="text"> <a href="/anime/show/<%=animes[i].id%>"><%=animes[i].name%></a>
 
     </h3>
 <%}%>
 </h2>
 
 
+
+
+<img class="gif" src="https://image.myanimelist.net/ui/BQM6jEZ-UJLgGUuvrNkYUCG8p-X1WhZLiR4h-oxkqQf2SFNwUGIBWCnvf9JBTeiR9-veoG0PIcNmHnSffrA-Gg">
+
+<div class="overlay"></div>
 
 
 
