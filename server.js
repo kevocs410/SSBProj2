@@ -57,7 +57,7 @@ app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
 
 
 app.get('/' , (req, res) => {
-  res.render("intro.ejs");
+  res.render("introPage.ejs");
 });
 
 
