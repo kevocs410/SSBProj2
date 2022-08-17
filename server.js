@@ -57,7 +57,7 @@ app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
 
 
 app.get('/' , (req, res) => {
-  res.render("introPage.ejs");
+  res.render("intro.ejs");
 });
 
 
@@ -97,8 +97,11 @@ app.put("/anime/:id", (req, res)=>{
 //index route
 app.get("/anime", (req, res) => {
   Anime.find({}, (error, allAnimes) => {
+    const maxLen = (allAnimes.length < 3 ? allAnimes.length : 3)
+    let shuffleAnime=allAnimes.sort((a,b) => 0.5 - Math.random());
+    const items = shuffleAnime.slice(0, maxLen);
       res.render("index.ejs", {
-          animes: allAnimes
+          animes: items
       });
   });
 });
@@ -111,8 +114,7 @@ app.get("/anime/new", (req,res)=>{
 })
 
 app.post("/anime", (req, res) =>{
-
-  Anime.create(req.body, (error,createdAnime) =>{
+  Anime.create(req.body, (error,createdAnime) =>{  
     res.redirect("/anime")
   });
 });
@@ -132,7 +134,13 @@ app.get("/anime/show/:id", (req, res)=>{
 
 
 
+////Search ROute
 
+// app.post("/anime", (req, res) =>{
+//   Anime.find({name:req.body.name, (error,createdAnime) =>{  
+//     res.render("/anime")
+//   });
+// });
 
 
 

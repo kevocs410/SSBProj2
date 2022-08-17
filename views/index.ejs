@@ -44,46 +44,46 @@
     <div class="p-2">
 
         <div class="card" style="width: 18rem;">
-            <img src="https://mcdn.wallpapersafari.com/medium/58/93/JYFUV7.jpg" class="card-img-top" alt="...">
+            <img src="<%=animes[0].img%>" class="card-img-top" alt="...">
             <div class="card-body">
-              <h5 class="card-title">fffff</h5>
-              <p class="card-text"></p>
-              <a href="#" class="btn btn-primary"></a>
+              <h5 class="card-title"><%=animes[0].name%></h5>
+              <p class="card-text"><%=animes[0].description%></p>
+              <a href="/anime/show/<%=animes[0].id%>" class="btn btn-primary">More Info</a>
             </div>
           </div>
         </div>
     <div class="p-2">
         <div class="card" style="width: 18rem;">
-        <img src="https://mcdn.wallpapersafari.com/medium/58/93/JYFUV7.jpg" class="card-img-top" alt="...">
+        <img src="<%=animes[1].img%>" class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary"></a>
+          <h5 class="card-title"><%=animes[1].name%></h5>
+          <p class="card-text"><%=animes[1].description%></p>
+          <a href="/anime/show/<%=animes[1].id%>" class="btn btn-primary">More Info</a>
         </div>
       </div>
     </div>
     <div class="p-2">
         <div class="card" style="width: 18rem;">
-        <img src="https://mcdn.wallpapersafari.com/medium/58/93/JYFUV7.jpg" class="card-img-top" alt="...">
+        <img src="<%=animes[2].img%>" class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">text</p>
-          <a href="#" class="btn btn-primary"></a>
+          <h5 class="card-title"><%=animes[2].name%></h5>
+          <p class="card-text"><%=animes[2].description%></p>
+          <a href="/anime/show/<%=animes[2].id%>" class="btn btn-primary">More Info</a>
         </div>
       </div></div>
   </div>
+ 
 
 
 
-
-<h2 class="upfront"> 
+<!-- <h2 class="upfront"> 
 <% for(let i = 0; i < animes.length; i++){%>
   
     <h3 class="text"> <a href="/anime/show/<%=animes[i].id%>"><%=animes[i].name%></a>
-
+      
     </h3>
 <%}%>
-</h2>
+</h2> -->
 
 
 
