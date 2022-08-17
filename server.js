@@ -134,13 +134,7 @@ app.get("/anime/show/:id", (req, res)=>{
 
 
 
-////Search ROute
 
-// app.post("/anime", (req, res) =>{
-//   Anime.find({name:req.body.name, (error,createdAnime) =>{  
-//     res.render("/anime")
-//   });
-// });
 
 
 
