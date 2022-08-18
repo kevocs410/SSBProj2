@@ -10,16 +10,25 @@
 </head>
 <body>
 
+
+
+
+
+
+
+<!-- NAVIGATION BAR -->
+
+
     <div class="container">
         <nav class="navbar navbar-dark bg-dark fixed-top upfront">
             <div class="container-fluid">
-              <a class="navbar-brand" href="/anime/">Anime Shows</a>
+              <a class="navbar-brand" href="/anime/">AniShow</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
                 <span class="navbar-toggler-icon"></span>
               </button>
               <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
                 <div class="offcanvas-header">
-                  <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">What would you like to do</h5>
+                  <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Do you have an Anime to add?</h5>
                   <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body">
@@ -39,7 +48,7 @@
 
 
 
-
+<!-- CONTAINER WITH ANIME PICKED AND INFORMATION AND DATE  -->
 
 
         <div class="container move">
@@ -72,7 +81,7 @@
 
 
 
-
+<!-- BOOTSTRAP JAVASCRIPT -->
 
 
 
@@ -83,7 +92,7 @@
 
 
   
-
+<!-- BUTTONS FOR EDIT AND DELETE -->
 <div class="d-flex justify-content-center"><a class="btn btn-primary btn-lg d-inline-flex flex-row justify-content-center align-content-center align-self-center flex-wrap" role="button" style="background: url('https://images.hdqwalls.com/wallpapers/thumb/goku-2020-new-be.jpg') center / cover no-repeat, rgba(255,255,255,0);position: relative;display: inline-flex;overflow: auto;filter: brightness(108%) contrast(103%);border-radius: 26px;border-width: 1px;border-style: solid;width: 104.1797px;" href="/anime/<%=animes.id%>/edit">EDIT</a>
   
   <form action="/anime/<%=animes.id%>?_method=DELETE" method="POST"><button type="submit" class="btn btn-primary btn-lg d-inline-flex flex-row justify-content-center align-content-center align-self-center flex-wrap"  style="background: url('https://i.pinimg.com/originals/02/95/69/0295690b06d598ca4af51229b07610b8.png') top / cover no-repeat;border-style: solid;border-radius: 19px;position: relative;display: inline-flex;overflow: auto;filter: brightness(108%) contrast(103%);margin-left: 27px;">Delete Post</button></form>

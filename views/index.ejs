@@ -9,16 +9,17 @@
         <title>Anime Shows</title>
     </head>
     <body>
+      <!-- NAVIGATION BAR -->
    <div class="container">
         <nav class="navbar navbar-dark bg-dark fixed-top upfront">
             <div class="container-fluid">
-              <a class="navbar-brand" href="#">Anime Shows</a>
+              <a class="navbar-brand" href="#">AniShow</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
                 <span class="navbar-toggler-icon"></span>
               </button>
               <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
                 <div class="offcanvas-header">
-                  <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">What would you like to do</h5>
+                  <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Do you have an Anime to add?</h5>
                   <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body">
@@ -33,24 +34,29 @@
         </div>
 
 
-    
-        <div class="d-flex justify-content-center"><a class="btn btn-primary btn-lg d-inline-flex flex-row justify-content-center align-content-center align-self-center flex-wrap" role="button" style="background: url('https://images.hdqwalls.com/wallpapers/thumb/goku-2020-new-be.jpg') center / cover no-repeat, rgba(255,255,255,0);position: relative;display: inline-flex;overflow: auto;filter: brightness(108%) contrast(103%);border-radius: 26px;border-width: 1px;border-style: solid;left: 1250px;bottom: 200px;" href="/anime/">New Set Of Anime</a>
+    <!-- BUTTON THAT REFRESHES PAGES FOR NEW SELECTIONS -->
 
 
-<div class=" middle container d-flex flex-row mb-3 justify-content-evenly align-items-center ">
-    <div class="p-2">
+    <div class="container d-flex flex-row justify-content-center align-items-center flex-wrap">
 
-        <div class="card" style="width: 18rem;">
+
+
+
+          <!-- Cards on index page  -->
+          <div class="container-fluid d-flex flex-row justify-content-center align-items-center flex-wrap" style="padding-top: 136px;">
+    <div class="p-2  ">
+
+        <div class="card " style="width: 18rem;">
             <img src="<%=animes[0].img%>" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title"><%=animes[0].name%></h5>
-              <p class="card-text"><%=animes[0].description%></p>
+              <p class="card-text "><%=animes[0].description%></p>
               <a href="/anime/show/<%=animes[0].id%>" class="btn btn-primary">More Info</a>
             </div>
           </div>
         </div>
     <div class="p-2">
-        <div class="card" style="width: 18rem;">
+        <div class="card " style="width: 18rem;">
         <img src="<%=animes[1].img%>" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title"><%=animes[1].name%></h5>
@@ -69,23 +75,13 @@
         </div>
       </div></div>
   </div>
- 
+ </div>
+
+ <div class="container-fluid d-flex flex-row justify-content-center align-items-center flex-wrap" style="padding-top: 51px;"><a class="btn btn-primary border rounded-pill d-flex" role="button" href="/anime" style="background: url('https://c4.wallpaperflare.com/wallpaper/295/163/719/anime-anime-boys-picture-in-picture-kimetsu-no-yaiba-kamado-tanjir%C5%8D-hd-wallpaper-preview.jpg') center / cover no-repeat;">New Choices</a></div>
 
 
 
-
-<!-- <h2 class="upfront"> 
-<% for(let i = 0; i < animes.length; i++){%>
-  
-    <h3 class="text"> <a href="/anime/show/<%=animes[i].id%>"><%=animes[i].name%></a>
-      
-    </h3>
-<%}%>
-</h2> -->
-
-
-
-
+<!-- BACKGROUND IMG AND OVERLAY -->
 <img class="gif" src="https://image.myanimelist.net/ui/BQM6jEZ-UJLgGUuvrNkYUCG8p-X1WhZLiR4h-oxkqQf2SFNwUGIBWCnvf9JBTeiR9-veoG0PIcNmHnSffrA-Gg">
 
 <div class="overlay"></div>
@@ -95,7 +91,7 @@
 
 
 
-
+<!-- BOOTSTRAP JAVASCRIPT -->
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 
